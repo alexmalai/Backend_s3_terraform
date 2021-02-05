@@ -40,12 +40,12 @@ resource "aws_dynamodb_table" "terraform_locks" {
   }
 }
 
-terraform {
-  backend "s3" {
-    bucket = "terraform-state-amalai-s31q"
-    key    = "global/s3/terraform.tfstate"
-    region = "us-east-1"
-    dynamodb_table = "terraform_state_locking"
-    encrypt = true
-  }
-}
+# terraform {
+#   backend "s3" {
+#     bucket = "terraform-state-amalai-s31q"
+#     key    = "global/s3/terraform.tfstate"
+#     region = "us-east-1"
+#     dynamodb_table = "terraform_state_locking"
+#     encrypt = true
+#   }
+# }
